@@ -9,6 +9,24 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <title>Borkova Prezentacija</title>
+    <style>
+         body{
+        background-image: url(./Resources/projekat.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 850px;
+         }
+        img{
+            height: 100px;
+            width: auto;
+            float: right;
+            margin-top: 5px;
+        }
+        dt, dd {
+            overflow: auto;
+        }
+    </style>
 </head>
 <body>
     <nav aria-label="breadcrumb">
@@ -21,21 +39,30 @@
             <li class="breadcrumb-item active" aria-current="page">Projekti</li>
         </ol>
     </nav> 
-    <div>
+    <div class="container bg-success rounded ">
         <dl>
-            <dt>Igre</dt>
-            <dd>Iyrada igara za web strane</dd>
-            <dt>Web strana "Kreativna Tehnička Rešenja"</dt>
-            <dd>Izrada web strane za projekat pod imenom Kreativna Tehnička Rešenja, koji podrazumeva pružanje usluga planiranja, organizovanja i realizacije zahtevnih tehničkih rešenja.</dd>
-            <dt>Web strana "Berzanska prodaja"</dt>
+            <dt> Igre <img src="Resources/game.jpg" alt="Igre"> </dt>
+            <dd>Izrada igara za web strane</dd>
+            <hr>
+            <dt> <img src="Resources/berza.jpg" alt="Igre"> Web strana "Berzanska prodaja"</dt>
             <dd>Izrada web strane za projekat prodaje proizvoda sa promenljivim cenama</dd>
-            <dt>Web strana za "Party"</dt>
+            <hr>
+            <dt><img src="Resources/chat.jpg" alt="Igre"> Web strana za "Party"</dt>
             <dd>Izrada web strane za novi koncept grupnog chatovanja, koji bi omogućio pravljenje online žurki, okupljanja, sastanaka...</dd>
-            <dt>Web strana "5x5"</dt>
+            <hr>
+            <dt> <img src="Resources/food.jpg" alt="Igre"> Web strana "5x5"</dt>
             <dd>Izrada web strane za promociju novog fast food koncepta "5x5"</dd>
-            <dt>Web strana "IA DJ"</dt>
+            <hr>
+            <dt> <img src="Resources/IADJ.jpg" alt="Igre"> Web strana "IA DJ"</dt>
             <dd>Izrada web strane za promociju i prodaju programa "IA DJ" i izrada online baze podataka sa miksovima</dd>
         </dl>
+    </div>
+    <div class="container bg-success border-dark rounded pt-2 pb-2">
+            <footer class="page-footer">
+                    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                            <a class="text-dark" href="#"> Kreativna Tehnička Rešenja</a>
+                          </div>  
+            </footer>
     </div>  
 </body>
 </html>
