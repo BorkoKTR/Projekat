@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+        background-image: url(./Resources/question-marks.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 950px;
+    }
+    #okvir{
+        width: 60%;
+        height: 700px;
+        background-color: black;
+        color: rgb(23, 129, 23);
+        margin: auto;
+        border: 3px solid rgb(119, 8, 8);
+        border-radius: 10px;
+        
+    }
+    h2 {
+        text-align: center;
+    }
+    p{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    form{
+        margin: auto;
+        padding-left:250px;
+        padding-top: 50px;
+    }
+
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+ <div id="okvir">
+  <h2>Igra memorije</h2>  
+  <p>Dobro došli u Igru memorije. U ovoj igri je potrebno upariti iste slike otvaranjem dve po dve, i kada se poklope iste slike one ostaju otvorene.Potrebno je upariti i na taj način otvoriti sve slike. Moguće je izabrati table različitih veličina i time uticati na nivo težine igre. Na raspolaganju su vam dve teme "Star Wars karakteri" i "Lord Of The Rings karakteri". Srećno!</p> 
+
+  <form action="">
+    <p>Odaberite temu:</p>
+      <input type="radio" name="tema" value="Star Wars"> Star Wars<br>
+      <input type="radio" name="tema" value="Lord Of The Rings"> Lord Of The Rings<br>
+      
+    <br>
+    <br>
+
+    <p>Odaberite nivo težine:</p>
+      <input type="radio" name="nivo" value="1"> 3x4<br>
+      <input type="radio" name="nivo" value="2"> 5x4<br>
+      <input type="radio" name="nivo" value="3"> 7x4<br>  
+    <br>
+
+      <input type="submit" value="Start!">
+    </form>
+ </div>  
+</body>
+</html>
