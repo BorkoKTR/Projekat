@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Igra Memorije</title>
+    <script src="memory.js"></script>
     <style>
     body {
         background-image: url(./Resources/question-marks.jpg);
@@ -21,6 +22,7 @@
         margin: auto;
         border: 3px solid rgb(119, 8, 8);
         border-radius: 10px;
+        text-align: center;
         /*font-size: 1vw;*/
     }
     h2 {
@@ -35,6 +37,20 @@
         margin: auto;
         text-align: center;
     }
+  #start{
+    width: 10%;
+    height: 2vw;
+    background-color: red;
+    color: black;
+    font-weight: bold;
+    padding-top: 2%;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+  }
+  #start:hover {
+    background-color: green;
+  }
 
     </style>
 </head>
@@ -47,20 +63,62 @@
 
   <form action="">
     <p>Odaberite temu:</p>
-      <input type="radio" name="tema" value="Star Wars"> Star Wars<br>
+      <input type="radio" name="tema" value="Star Wars" checked> Star Wars<br>
       <input type="radio" name="tema" value="Lord Of The Rings"> Lord Of The Rings<br>
       
     <br>
     <br>
 
     <p>Odaberite nivo težine:</p>
-      <input type="radio" name="nivo" value="1"> 3x4<br>
+      <input type="radio" name="nivo" value="1" checked> 3x4<br>
       <input type="radio" name="nivo" value="2"> 5x4<br>
       <input type="radio" name="nivo" value="3"> 7x4<br>  
-    <br>
-
-      <input type="submit" value="Start!">
+    <br> 
     </form>
- </div>  
+    <div id="start" onclick="upis ()">START</div>
+    <div style="height: 100px; width: 100px;" id="upisPodataka">Bla bla</div>
+ </div> 
+ <script>
+   var tema= "LOTR";
+   var nivo="3";
+   function upis () { 
+   tema_igre = document.getElementsByName("tema");
+   tezina_igre = document.getElementsByName("nivo");
+  
+  if(tema_igre[0].checked){
+ 
+    tema = "SW";    
+    
+  } else if(tema_igre[1].checked) {
+    
+    tema = "LOTR";
+    
+ }
+
+ if(tezina_igre[0].checked){
+ 
+ nivo = "1";    
+ 
+} else { if(tezina_igre[1].checked) {
+ 
+ nivo = "2"; 
+} else { nivo = "3"}}
+
+
+localStorage.setItem('temaIgre', tema);
+localStorage.setItem('nivoIgre', nivo);
+
+ document.getElementById("upisPodataka").innerHTML = "Hahahahaha!" + tema + nivo};
+ 
+  /*for (let i = 0; i < tezina_igre.length; i++) {
+    if (tezina_igre[i].checked){
+      nivo = tezina.igre[i];
+      break;
+    }
+    
+  }
+  document.getElementById("start").innerHTML = "Odabrali ste" + tema + "i nivo " + nivo;
+   }*/
+ </script>
 </body>
 </html>
