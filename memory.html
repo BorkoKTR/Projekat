@@ -75,7 +75,7 @@
       <input type="radio" name="nivo" value="3"> 7x4<br>  
     <br> 
     </form>
-    <div id="start" onclick="location.href='memory2.html'">START</div>
+    <div id="start" onclick="upis ()">START</div>
     <div style="height: 100px; width: 100px;" id="upisPodataka">Bla bla</div>
  </div> 
  <script>
@@ -108,7 +108,9 @@
 localStorage.setItem('temaIgre', tema);
 localStorage.setItem('nivoIgre', nivo);
 
- document.getElementById("upisPodataka").innerHTML = "Hahahahaha!" + tema + nivo};
+ document.getElementById("upisPodataka").innerHTML = "Hahahahaha!" + tema + nivo;
+
+window.open("memory2.html","_self");}
  
   /*for (let i = 0; i < tezina_igre.length; i++) {
     if (tezina_igre[i].checked){

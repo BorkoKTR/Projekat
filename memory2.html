@@ -8,7 +8,7 @@
     <!--<script src="memory.js"></script> -->
     <style>
     body {
-        background-image: url(./Resources/question-marks.jpg);
+        background-image: url(.//question-marks.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -44,7 +44,7 @@
                 height: 35vw;
                 border: 0px solid rgb(247, 244, 244);
                 border-radius: 0px;
-                background-image: url(./Resources/riddler.jpg);
+                background-image: url(.//riddler.jpg);
                 background-position: center;
                 background-size: cover;
 			}
@@ -55,7 +55,7 @@
                 height: 18vw;
                 border: 1px solid rgb(130, 247, 159);
                 border-radius: 2px;
-                background-image: url(./Resources/riddler.jpg);
+                background-image: url(.//riddler.jpg);
                 background-position: center;
                 background-size: cover;
                 text-align: center;
@@ -63,9 +63,9 @@
             .slikaOpen{
                 width: 18vw;
                 height: 18vw;
-                border: 1px solid rgbrgb(7, 5, 77);
+                border: 1px solid rgb(7, 5, 77);
                 border-radius: 2px;
-                background-image: url(./Resources/riddler.jpg);
+                background-image: url(.//riddler.jpg);
                 background-position: center;
                 background-size: cover;
                 text-align: center;  
@@ -78,7 +78,7 @@
                 height: 10vw;
                 border: 0px solid rgb(247, 244, 244);
                 border-radius: 0px;
-                background-image: url(./Resources/riddler.jpg);
+                background-image: url(.//riddler.jpg);
                 background-position: center;
                 background-size: cover;
             }
@@ -92,7 +92,7 @@
                 height: 10vw;
                 border: 1px solid rgb(130, 247, 159);
                 border-radius: 2px;
-                background-image: url(./Resources/riddler.jpg);
+                background-image: url(.//riddler.jpg);
                 background-position: center;
                 background-size: cover;
                 text-align: center;
@@ -102,7 +102,7 @@
                 height: 10vw;
                 border: 1px solid rgb(7, 5, 77);
                 border-radius: 2px;
-                background-image: url(./Resources/riddler.jpg);
+                background-image: url(.//riddler.jpg);
                 background-position: center;
                 background-size: cover;
                 text-align: center;   
@@ -154,44 +154,137 @@
 }
 
 </style>
+<script>
+var temica = localStorage.getItem("temaIgre");
+var nivojcic = localStorage.getItem("nivoIgre");
+var starWars = ["./Resources/StarWars/sw1.jpg",
+                "./Resources/StarWars/sw2.jpg",
+                "./Resources/StarWars/sw3.jpg",
+                "./Resources/StarWars/sw3.jpg",
+                "./Resources/StarWars/sw4.jpg",
+                "./Resources/StarWars/sw5.jpg",
+                "./Resources/StarWars/sw6.jpg",
+                "./Resources/StarWars/sw7.jpg",
+                "./Resources/StarWars/sw8.jpg",
+                "./Resources/StarWars/sw9.jpg",
+                "./Resources/StarWars/sw10.jpg",
+                "./Resources/StarWars/sw11.jpg",
+                "./Resources/StarWars/sw12.jpg",
+                "./Resources/StarWars/sw13.jpg",
+                "./Resources/StarWars/sw14.jpg",
+                "./Resources/StarWars/sw15.jpg",
+                "./Resources/StarWars/sw16.jpg",
+                "./Resources/StarWars/sw17.jpg",
+                "./Resources/StarWars/sw18.jpg",
+                "./Resources/StarWars/sw19.jpg",
+                "./Resources/StarWars/sw20.jpg"];
+var LOTR =     ["./Resources/LordOfTheRings/LOTR1.jpg",
+                "./Resources/LordOfTheRings/LOTR2.jpg",
+                "./Resources/LordOfTheRings/LOTR3.jpg",
+                "./Resources/LordOfTheRings/LOTR3.jpg",
+                "./Resources/LordOfTheRings/LOTR4.jpg",
+                "./Resources/LordOfTheRings/LOTR5.jpg",
+                "./Resources/LordOfTheRings/LOTR6.jpg",
+                "./Resources/LordOfTheRings/LOTR7.jpg",
+                "./Resources/LordOfTheRings/LOTR8.jpg",
+                "./Resources/LordOfTheRings/LOTR9.jpg",
+                "./Resources/LordOfTheRings/LOTR10.jpg",
+                "./Resources/LordOfTheRings/LOTR11.jpg",
+                "./Resources/LordOfTheRings/LOTR12.jpg",
+                "./Resources/LordOfTheRings/LOTR13.jpg",
+                "./Resources/LordOfTheRings/LOTR14.jpg",
+                "./Resources/LordOfTheRings/LOTR15.jpg",
+                "./Resources/LordOfTheRings/LOTR16.jpg",
+                "./Resources/LordOfTheRings/LOTR17.jpg",
+                "./Resources/LordOfTheRings/LOTR18.jpg",
+                "./Resources/LordOfTheRings/LOTR19.jpg",
+                "./Resources/LordOfTheRings/LOTR20.jpg"];
+var dupliNiz = [];
+
+function mesanjeKarata (temaIgre, nivoIgre) {
+switch (nivoIgre) {
+  case "1":
+    brojKarata=12;
+    break; 
+  case "2":
+    brojKarata=16;
+    break; 
+  case "3":
+    brojKarata=20;
+    break;
+  default: 
+    break;}
+
+if (temaIgre === "SW"){
+    for (let i = 0; i < brojKarata; i++) {
+dupliNiz.push = starWars[i];
+dupliNiz.push = starWars[i];          
+    }
+}
+else {
+    for (let i = 0; i < brojKarata; i++) {
+dupliNiz.push = LOTR[i];
+dupliNiz.push = LOTR[i];          
+    }  
+}
+
+for (let i = 0; i < brojKarata*2; i++) {
+    var redniBroj = i.toString();
+    var duzinaNiz = dupliNiz.length;
+    var pozicija = Math.floor((Math.random() * duzinaNiz));
+    var noviElement = dupliNiz.slice(pozicija);
+    document.getElementById("ss"+redniBroj).src = noviElement; 
+}
+};
+        
+
+</script>
 </head>
 <body>
 <div id="okvir">
     
-        <div id="s1" class="slika"><img src="./Resources/StarWars/sw1.jpg" alt="1" class="image_" id="ss1"></div>
-        <div id="s2" class="slika"><img src="./Resources/StarWars/sw2.jpg" alt="1" class="image_" id="ss2"></div>
-        <div id="s3" class="slika"><img src="./Resources/StarWars/sw1.jpg" alt="1" class="image_" id="ss1"></div>
-        <div id="s4" class="slika"><img src="./Resources/StarWars/sw2.jpg" alt="1" class="image_" id="ss2"></div>
-        <div id="s5" class="slika"><img src="./Resources/StarWars/sw3.jpg" alt="1" class="image_" id="ss3"></div>
-        <div id="s6" class="slika"><img src="./Resources/StarWars/sw3.jpg" alt="1" class="image_" id="ss3"></div>
-        <div id="s7" class="slika"><img src="./Resources/StarWars/sw4.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s8" class="slika"><img src="./Resources/StarWars/sw4.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s9" class="slika"><img src="./Resources/StarWars/sw5.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s10" class="slika"><img src="./Resources/StarWars/sw6.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s11" class="slika"><img src="./Resources/StarWars/sw7.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s12" class="slika"><img src="./Resources/StarWars/sw5.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s13" class="slika"><img src="./Resources/StarWars/sw7.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s14" class="slika"><img src="./Resources/StarWars/sw6.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s15" class="slika"><img src="./Resources/StarWars/sw8.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s16" class="slika"><img src="./Resources/StarWars/sw8.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s17" class="slika"><img src="./Resources/StarWars/sw9.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s18" class="slika"><img src="./Resources/StarWars/sw9.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s19" class="slika"><img src="./Resources/StarWars/sw11.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s20" class="slika"><img src="./Resources/StarWars/sw13.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s21" class="slika"><img src="./Resources/StarWars/sw10.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s22" class="slika"><img src="./Resources/StarWars/sw13.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s23" class="slika"><img src="./Resources/StarWars/sw10.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s24" class="slika"><img src="./Resources/StarWars/sw11.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s25" class="slika"><img src="./Resources/StarWars/sw12.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s26" class="slika"><img src="./Resources/StarWars/sw14.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s27" class="slika"><img src="./Resources/StarWars/sw14.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s28" class="slika"><img src="./Resources/StarWars/sw12.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s29" class="slika"><img src="./Resources/StarWars/sw16.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s30" class="slika"><img src="./Resources/StarWars/sw15.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s31" class="slika"><img src="./Resources/StarWars/sw15.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="s32" class="slika"><img src="./Resources/StarWars/sw16.jpg" alt="1" class="image_" id="ss4"></div>
-        <div id="over"></div>
-        <div id="mod"></div>
+        <div id="s0" class="slika"><img src="" alt="1" class="image_" id="ss0"></div>
+        <div id="s1" class="slika"><img src="" alt="1" class="image_" id="ss1"></div>
+        <div id="s2" class="slika"><img src="" alt="1" class="image_" id="ss2"></div>
+        <div id="s3" class="slika"><img src="" alt="1" class="image_" id="ss3"></div>
+        <div id="s4" class="slika"><img src="" alt="1" class="image_" id="ss4"></div>
+        <div id="s5" class="slika"><img src="" alt="1" class="image_" id="ss5"></div>
+        <div id="s6" class="slika"><img src="" alt="1" class="image_" id="ss6"></div>
+        <div id="s7" class="slika"><img src="" alt="1" class="image_" id="ss7"></div>
+        <div id="s8" class="slika"><img src="" alt="1" class="image_" id="ss8"></div>
+        <div id="s9" class="slika"><img src="" alt="1" class="image_" id="ss9"></div>
+        <div id="s10" class="slika"><img src="" alt="1" class="image_" id="ss10"></div>
+        <div id="s11" class="slika"><img src="" alt="1" class="image_" id="ss11"></div>
+        <div id="s12" class="slika"><img src="" alt="1" class="image_" id="ss12"></div>
+        <div id="s13" class="slika"><img src="" alt="1" class="image_" id="ss13"></div>
+        <div id="s14" class="slika"><img src="" alt="1" class="image_" id="ss14"></div>
+        <div id="s15" class="slika"><img src="" alt="1" class="image_" id="ss15"></div>
+        <div id="s16" class="slika"><img src="" alt="1" class="image_" id="ss16"></div>
+        <div id="s17" class="slika"><img src="" alt="1" class="image_" id="ss17"></div>
+        <div id="s18" class="slika"><img src="" alt="1" class="image_" id="ss18"></div>
+        <div id="s19" class="slika"><img src="" alt="1" class="image_" id="ss19"></div>
+        <div id="s20" class="slika"><img src="" alt="1" class="image_" id="ss20"></div>
+        <div id="s21" class="slika"><img src="" alt="1" class="image_" id="ss21"></div>
+        <div id="s22" class="slika"><img src="" alt="1" class="image_" id="ss22"></div>
+        <div id="s23" class="slika"><img src="" alt="1" class="image_" id="ss23"></div>
+        <div id="s24" class="slika"><img src="" alt="1" class="image_" id="ss24"></div>
+        <div id="s25" class="slika"><img src="" alt="1" class="image_" id="ss25"></div>
+        <div id="s26" class="slika"><img src="" alt="1" class="image_" id="ss26"></div>
+        <div id="s27" class="slika"><img src="" alt="1" class="image_" id="ss27"></div>
+        <div id="s28" class="slika"><img src="" alt="1" class="image_" id="ss28"></div>
+        <div id="s29" class="slika"><img src="" alt="1" class="image_" id="ss29"></div>
+        <div id="s30" class="slika"><img src="" alt="1" class="image_" id="ss30"></div>
+        <div id="s31" class="slika"><img src="" alt="1" class="image_" id="ss31"></div>
+        <div id="s32" class="slika"><img src="" alt="1" class="image_" id="ss32"></div>
+        <div id="s33" class="slika"><img src="" alt="1" class="image_" id="ss33"></div>
+        <div id="s34" class="slika"><img src="" alt="1" class="image_" id="ss34"></div>
+        <div id="s35" class="slika"><img src="" alt="1" class="image_" id="ss35"></div>
+        <div id="s36" class="slika"><img src="" alt="1" class="image_" id="ss36"></div>
+        <div id="s37" class="slika"><img src="" alt="1" class="image_" id="ss37"></div>
+        <div id="s38" class="slika"><img src="" alt="1" class="image_" id="ss38"></div>
+        <div id="s39" class="slika"><img src="" alt="1" class="image_" id="ss39"></div>
+
+
     <script>
     const cards = document.querySelectorAll('.slika');
     let brojac = 0;
