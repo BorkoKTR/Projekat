@@ -8,7 +8,7 @@
     <!--<script src="memory.js"></script> -->
     <style>
     body {
-        background-image: url(.//question-marks.jpg);
+        background-image: url(./Resources/question-marks.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -55,7 +55,7 @@
                 height: 18vw;
                 border: 1px solid rgb(130, 247, 159);
                 border-radius: 2px;
-                background-image: url(.//riddler.jpg);
+                background-image: url(./Resources/riddler.jpg);
                 background-position: center;
                 background-size: cover;
                 text-align: center;
@@ -65,7 +65,7 @@
                 height: 18vw;
                 border: 1px solid rgb(7, 5, 77);
                 border-radius: 2px;
-                background-image: url(.//riddler.jpg);
+                background-image: url(./Resources/riddler.jpg);
                 background-position: center;
                 background-size: cover;
                 text-align: center;  
@@ -92,7 +92,7 @@
                 height: 10vw;
                 border: 1px solid rgb(130, 247, 159);
                 border-radius: 2px;
-                background-image: url(.//riddler.jpg);
+                background-image: url(./Resources/riddler.jpg);
                 background-position: center;
                 background-size: cover;
                 text-align: center;
@@ -102,7 +102,7 @@
                 height: 10vw;
                 border: 1px solid rgb(7, 5, 77);
                 border-radius: 2px;
-                background-image: url(.//riddler.jpg);
+                background-image: url(./Resources/riddler.jpg);
                 background-position: center;
                 background-size: cover;
                 text-align: center;   
@@ -126,6 +126,10 @@
     
     .slika:hover {
         border-color: red;
+    }
+
+    .invisible {
+        display: none;
     }
     .overlay {
     position: fixed;
@@ -154,91 +158,7 @@
 }
 
 </style>
-<script>
-var temica = localStorage.getItem("temaIgre");
-var nivojcic = localStorage.getItem("nivoIgre");
-var starWars = ["./Resources/StarWars/sw1.jpg",
-                "./Resources/StarWars/sw2.jpg",
-                "./Resources/StarWars/sw3.jpg",
-                "./Resources/StarWars/sw3.jpg",
-                "./Resources/StarWars/sw4.jpg",
-                "./Resources/StarWars/sw5.jpg",
-                "./Resources/StarWars/sw6.jpg",
-                "./Resources/StarWars/sw7.jpg",
-                "./Resources/StarWars/sw8.jpg",
-                "./Resources/StarWars/sw9.jpg",
-                "./Resources/StarWars/sw10.jpg",
-                "./Resources/StarWars/sw11.jpg",
-                "./Resources/StarWars/sw12.jpg",
-                "./Resources/StarWars/sw13.jpg",
-                "./Resources/StarWars/sw14.jpg",
-                "./Resources/StarWars/sw15.jpg",
-                "./Resources/StarWars/sw16.jpg",
-                "./Resources/StarWars/sw17.jpg",
-                "./Resources/StarWars/sw18.jpg",
-                "./Resources/StarWars/sw19.jpg",
-                "./Resources/StarWars/sw20.jpg"];
-var LOTR =     ["./Resources/LordOfTheRings/LOTR1.jpg",
-                "./Resources/LordOfTheRings/LOTR2.jpg",
-                "./Resources/LordOfTheRings/LOTR3.jpg",
-                "./Resources/LordOfTheRings/LOTR3.jpg",
-                "./Resources/LordOfTheRings/LOTR4.jpg",
-                "./Resources/LordOfTheRings/LOTR5.jpg",
-                "./Resources/LordOfTheRings/LOTR6.jpg",
-                "./Resources/LordOfTheRings/LOTR7.jpg",
-                "./Resources/LordOfTheRings/LOTR8.jpg",
-                "./Resources/LordOfTheRings/LOTR9.jpg",
-                "./Resources/LordOfTheRings/LOTR10.jpg",
-                "./Resources/LordOfTheRings/LOTR11.jpg",
-                "./Resources/LordOfTheRings/LOTR12.jpg",
-                "./Resources/LordOfTheRings/LOTR13.jpg",
-                "./Resources/LordOfTheRings/LOTR14.jpg",
-                "./Resources/LordOfTheRings/LOTR15.jpg",
-                "./Resources/LordOfTheRings/LOTR16.jpg",
-                "./Resources/LordOfTheRings/LOTR17.jpg",
-                "./Resources/LordOfTheRings/LOTR18.jpg",
-                "./Resources/LordOfTheRings/LOTR19.jpg",
-                "./Resources/LordOfTheRings/LOTR20.jpg"];
-var dupliNiz = [];
 
-function mesanjeKarata (temaIgre, nivoIgre) {
-switch (nivoIgre) {
-  case "1":
-    brojKarata=12;
-    break; 
-  case "2":
-    brojKarata=16;
-    break; 
-  case "3":
-    brojKarata=20;
-    break;
-  default: 
-    break;}
-
-if (temaIgre === "SW"){
-    for (let i = 0; i < brojKarata; i++) {
-dupliNiz.push = starWars[i];
-dupliNiz.push = starWars[i];          
-    }
-}
-else {
-    for (let i = 0; i < brojKarata; i++) {
-dupliNiz.push = LOTR[i];
-dupliNiz.push = LOTR[i];          
-    }  
-}
-
-for (let i = 0; i < brojKarata*2; i++) {
-    var redniBroj = i.toString();
-    var duzinaNiz = dupliNiz.length;
-    var pozicija = Math.floor((Math.random() * duzinaNiz));
-    var noviElement = dupliNiz.slice(pozicija);
-    document.getElementById("ss"+redniBroj).src = noviElement; 
-}
-};
-        
-
-</script>
 </head>
 <body>
 <div id="okvir">
@@ -284,7 +204,152 @@ for (let i = 0; i < brojKarata*2; i++) {
         <div id="s38" class="slika"><img src="" alt="1" class="image_" id="ss38"></div>
         <div id="s39" class="slika"><img src="" alt="1" class="image_" id="ss39"></div>
 
+        <script>
+            var temica = localStorage.getItem("temaIgre");
+            var nivojcic = localStorage.getItem("nivoIgre");
+            var starWars = ["./Resources/StarWars/sw1.jpg",
+                            "./Resources/StarWars/sw1.jpg",
+                            "./Resources/StarWars/sw2.jpg",
+                            "./Resources/StarWars/sw2.jpg",
+                            "./Resources/StarWars/sw3.jpg",
+                            "./Resources/StarWars/sw3.jpg",
+                            "./Resources/StarWars/sw4.jpg",
+                            "./Resources/StarWars/sw4.jpg",
+                            "./Resources/StarWars/sw5.jpg",
+                            "./Resources/StarWars/sw5.jpg",
+                            "./Resources/StarWars/sw6.jpg",
+                            "./Resources/StarWars/sw6.jpg",
+                            "./Resources/StarWars/sw7.jpg",
+                            "./Resources/StarWars/sw7.jpg",
+                            "./Resources/StarWars/sw8.jpg",
+                            "./Resources/StarWars/sw8.jpg",
+                            "./Resources/StarWars/sw9.jpg",
+                            "./Resources/StarWars/sw9.jpg",
+                            "./Resources/StarWars/sw10.jpg",
+                            "./Resources/StarWars/sw10.jpg",
+                            "./Resources/StarWars/sw11.jpg",
+                            "./Resources/StarWars/sw11.jpg",
+                            "./Resources/StarWars/sw12.jpg",
+                            "./Resources/StarWars/sw12.jpg",
+                            "./Resources/StarWars/sw13.jpg",
+                            "./Resources/StarWars/sw13.jpg",
+                            "./Resources/StarWars/sw14.jpg",
+                            "./Resources/StarWars/sw14.jpg",
+                            "./Resources/StarWars/sw15.jpg",
+                            "./Resources/StarWars/sw15.jpg",
+                            "./Resources/StarWars/sw16.jpg",
+                            "./Resources/StarWars/sw16.jpg",
+                            "./Resources/StarWars/sw17.jpg",
+                            "./Resources/StarWars/sw17.jpg",
+                            "./Resources/StarWars/sw18.jpg",
+                            "./Resources/StarWars/sw18.jpg",
+                            "./Resources/StarWars/sw19.jpg",
+                            "./Resources/StarWars/sw19.jpg",
+                            "./Resources/StarWars/sw20.jpg",
+                            "./Resources/StarWars/sw20.jpg"];
+            var LOTR =     ["./Resources/LordOfTheRings/LOTR1.jpg",
+                            "./Resources/LordOfTheRings/LOTR1.jpg",
+                            "./Resources/LordOfTheRings/LOTR2.jpg",
+                            "./Resources/LordOfTheRings/LOTR2.jpg",
+                            "./Resources/LordOfTheRings/LOTR3.jpg",
+                            "./Resources/LordOfTheRings/LOTR3.jpg",
+                            "./Resources/LordOfTheRings/LOTR4.jpg",
+                            "./Resources/LordOfTheRings/LOTR4.jpg",
+                            "./Resources/LordOfTheRings/LOTR5.jpg",
+                            "./Resources/LordOfTheRings/LOTR5.jpg",
+                            "./Resources/LordOfTheRings/LOTR6.jpg",
+                            "./Resources/LordOfTheRings/LOTR6.jpg",
+                            "./Resources/LordOfTheRings/LOTR7.jpg",
+                            "./Resources/LordOfTheRings/LOTR7.jpg",
+                            "./Resources/LordOfTheRings/LOTR8.jpg",
+                            "./Resources/LordOfTheRings/LOTR8.jpg",
+                            "./Resources/LordOfTheRings/LOTR9.jpg",
+                            "./Resources/LordOfTheRings/LOTR9.jpg",
+                            "./Resources/LordOfTheRings/LOTR10.jpg",
+                            "./Resources/LordOfTheRings/LOTR10.jpg",
+                            "./Resources/LordOfTheRings/LOTR11.jpg",
+                            "./Resources/LordOfTheRings/LOTR11.jpg",
+                            "./Resources/LordOfTheRings/LOTR12.jpg",
+                            "./Resources/LordOfTheRings/LOTR12.jpg",
+                            "./Resources/LordOfTheRings/LOTR13.jpg",
+                            "./Resources/LordOfTheRings/LOTR13.jpg",
+                            "./Resources/LordOfTheRings/LOTR14.jpg",
+                            "./Resources/LordOfTheRings/LOTR14.jpg",
+                            "./Resources/LordOfTheRings/LOTR15.jpg",
+                            "./Resources/LordOfTheRings/LOTR15.jpg",
+                            "./Resources/LordOfTheRings/LOTR16.jpg",
+                            "./Resources/LordOfTheRings/LOTR16.jpg",
+                            "./Resources/LordOfTheRings/LOTR17.jpg",
+                            "./Resources/LordOfTheRings/LOTR17.jpg",
+                            "./Resources/LordOfTheRings/LOTR18.jpg",
+                            "./Resources/LordOfTheRings/LOTR18.jpg",
+                            "./Resources/LordOfTheRings/LOTR19.jpg",
+                            "./Resources/LordOfTheRings/LOTR19.jpg",
+                            "./Resources/LordOfTheRings/LOTR20.jpg",
+                            "./Resources/LordOfTheRings/LOTR20.jpg"];
+            var dupliNiz = [];
+            document.body.onload = mesanjeKarata(temica, nivojcic);
+            
+            /*document.getElementById("ss"+"0").src = "./Resources/LordOfTheRings/LOTR1.jpg";*/
+            
+            function mesanjeKarata (temaIgre, nivoIgre) {
+            switch (nivoIgre) {
+              case "1":
+                brojKarata=24;
+                starWars.splice(24,16);
+                LOTR.splice(24,16);
+                break; 
+              case "2":
+                brojKarata=32;
+                starWars.splice(32,8);
+                LOTR.splice(32,8);
+                break; 
+              case "3":
+                brojKarata=40;
+                break;
+              default: 
+                break;}
+            starWars.splice()
+            /*if (true){
+                for (let i = 0; i < brojKarata; i++) {
+            dupliNiz.push = starWars[i];
+            dupliNiz.push = starWars[i];          
+                }
+            }
+            else {
+                for (let i = 0; i < brojKarata; i++) {
+            dupliNiz.push = LOTR[i];
+            dupliNiz.push = LOTR[i];          
+                }  
+            }
+            console.log(dupliNiz.length);
+            document.getElementById("s1").innerHTML = dupliNiz.length;*/
+            
 
+
+            for (let i = 0; i < 40; i++) {
+                var redniBroj = i.toString();
+                var duzinaNizSW = starWars.length;
+                var duzinaNizLOTR = LOTR.length;
+                var pozicijaSW = Math.floor((Math.random() * duzinaNizSW));
+                var pozicijaLOTR = Math.floor((Math.random() * duzinaNizLOTR));
+                var noviElementSW = starWars.splice(pozicijaSW,1);
+                var noviElementLOTR = LOTR.splice(pozicijaLOTR,1);
+
+             if (i >= brojKarata) 
+                {document.getElementById("s"+redniBroj).classList.add('invisible')}
+                else if (temaIgre == "SW") {
+                    document.getElementById("ss"+redniBroj).src = noviElementSW}
+                else 
+                 {document.getElementById("ss"+redniBroj).src = noviElementLOTR} 
+            }
+
+            
+            return;
+            };
+                    
+            
+            </script>
     <script>
     const cards = document.querySelectorAll('.slika');
     let brojac = 0;
@@ -325,7 +390,7 @@ for (let i = 0; i < brojKarata*2; i++) {
             openCards[1].parentElement.classList.remove('slikaOpen');
             brojac = 0;
             ind=true;
-            return;},1200);                                           
+            return;},900);                                           
         }
     }}}
     cards.forEach(card => card.addEventListener('click', magnify));
